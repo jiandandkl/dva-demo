@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
+import * as PropTypes from 'prop-types';
 import { Table, Popconfirm, Button } from 'antd';
 
 const ProductList = ({ onDelete, products, onAdd }) => {
@@ -10,12 +10,12 @@ const ProductList = ({ onDelete, products, onAdd }) => {
     title: 'Actions',
     render: (text, record) => {
       return (
-        <React.Fragment>
+        <div>
           <Popconfirm title="Delete?" onConfirm={() => onDelete(record.id)}>
             <Button>Delete</Button>
           </Popconfirm>
           <Button style={{marginLeft: '20px'}} onClick={() => onAdd(record)}>Add Next</Button>
-        </React.Fragment>
+        </div>
       );
     },
   }

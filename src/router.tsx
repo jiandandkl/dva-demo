@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Router, Route, Switch } from 'dva/router';
 import IndexPage from './routes/IndexPage';
 import Products from './routes/Products';
@@ -20,7 +20,9 @@ function RouterConfig({ history }) {
             <Route path="/todos" exact component={Todos} />
           </Switch>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>Dva demo</Footer>
+          <Footer>
+            <div style={{ textAlign: 'center' }}>Dva demo</div>
+          </Footer>
         </Layout>
     </Layout>
       

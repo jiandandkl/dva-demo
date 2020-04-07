@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
+import * as PropTypes from 'prop-types';
 import { Button, Input } from 'antd';
 import {
   SearchOutlined,
@@ -7,7 +7,7 @@ import {
   CheckOutlined
 } from '@ant-design/icons';
 
-const TodoList = ({ onDelete, todos, onAdd, inputValue, onChange, handleCom, handleDel }) => {
+const TodoList = ({ todos, onAdd, inputValue, onChange, handleCom, handleDel }) => {
   return (
     <div style={{
       width: '500px',
